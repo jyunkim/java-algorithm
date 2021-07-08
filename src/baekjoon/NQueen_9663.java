@@ -3,13 +3,11 @@ package baekjoon;
 import java.io.*;
 
 public class NQueen_9663 {
-
     static int n;
     static int[][] board;
     static int answer = 0;
 
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(br.readLine());
         board = new int[n][n];
@@ -18,7 +16,6 @@ public class NQueen_9663 {
     }
 
     public static void dfs(int line) {
-
         // 종료 조건
         if (line == n) {
             answer++;
@@ -34,7 +31,6 @@ public class NQueen_9663 {
     }
 
     public static boolean check(int row, int col) {
-
         // 좌우
         for (int j = 0; j < n; j++) {
             if (board[row][j] != 0) {

@@ -10,7 +10,6 @@ public class Teach_1062 {
     static boolean[] learned;
 
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] input = br.readLine().split(" ");
         n = Integer.parseInt(input[0]);
@@ -42,7 +41,6 @@ public class Teach_1062 {
     }
 
     public static void check(int num, int index) {
-
         // 종료 조건
         // 다 배웠으면 개수 확인
         if (num == k - 5) {

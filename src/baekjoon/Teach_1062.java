@@ -4,16 +4,16 @@ import java.io.*;
 import java.util.*;
 
 public class Teach_1062 {
-    static int n, k;
-    static ArrayList<String> words;
-    static int answer = 0;
-    static boolean[] learned;
+    private static int n, k;
+    private static List<String> words; // 다형성 이용 -> 매개변수 같은 타입 정의 시 더 유연
+    private static int answer = 0;
+    private static boolean[] learned;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] input = br.readLine().split(" ");
-        n = Integer.parseInt(input[0]);
-        k = Integer.parseInt(input[1]);
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        n = Integer.parseInt(st.nextToken());
+        k = Integer.parseInt(st.nextToken());
 
         String str;
         words = new ArrayList<>();
@@ -23,6 +23,7 @@ public class Teach_1062 {
         }
 
         // 학습한 단어 체크
+        // index 계산
         learned = new boolean[26];
         learned['a' - 'a'] = true;
         learned['c' - 'a'] = true;
@@ -40,6 +41,7 @@ public class Teach_1062 {
         }
     }
 
+    // 백트래킹
     public static void check(int num, int index) {
         // 종료 조건
         // 다 배웠으면 개수 확인

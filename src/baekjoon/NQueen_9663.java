@@ -3,9 +3,9 @@ package baekjoon;
 import java.io.*;
 
 public class NQueen_9663 {
-    static int n;
-    static int[][] board;
-    static int answer = 0;
+    private static int n;
+    private static int[][] board;
+    private static int answer = 0;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -15,6 +15,7 @@ public class NQueen_9663 {
         System.out.println(answer);
     }
 
+    // 백트래킹
     public static void dfs(int line) {
         // 종료 조건
         if (line == n) {

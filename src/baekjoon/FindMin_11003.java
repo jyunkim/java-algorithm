@@ -10,14 +10,16 @@ import java.io.*;
 import java.util.*;
 
 public class FindMin_11003 {
+    private static int n, l;
+    private static Deque<Pair> dq;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int n = Integer.parseInt(st.nextToken());
-        int l = Integer.parseInt(st.nextToken());
+        n = Integer.parseInt(st.nextToken());
+        l = Integer.parseInt(st.nextToken());
         st = new StringTokenizer(br.readLine());
-        Deque<Pair> dq = new ArrayDeque<>();
+        dq = new ArrayDeque<>();
 
         for (int i = 0; i < n; i++) {
             int temp = Integer.parseInt(st.nextToken());

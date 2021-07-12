@@ -5,6 +5,7 @@ import java.util.*;
 
 // 가격을 기준으로 하면 2개 넣을 수 있는데 1개밖에 넣지 못하는 상황 발생
 public class JewelryThief_1202 {
+
     private static int n, k;
     private static Jewelry[] jews;
     private static int[] weights;
@@ -63,6 +64,7 @@ public class JewelryThief_1202 {
     }
 
     static class Jewelry {
+
         private int m;
         private int v;
 

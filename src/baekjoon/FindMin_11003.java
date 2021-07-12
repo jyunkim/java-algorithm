@@ -1,15 +1,17 @@
 package baekjoon;
-/*
-속도
-Scanner < BufferedReader
-System.out < BufferedWriter
-split < StringTokenizer
-LinkedList < ArrayDeque
- */
+
 import java.io.*;
 import java.util.*;
 
+/**
+ * 속도
+ * Scanner < BufferedReader
+ * System.out < BufferedWriter
+ * split < StringTokenizer
+ * LinkedList < ArrayDeque
+ */
 public class FindMin_11003 {
+
     private static int n, l;
     private static Deque<Pair> dq;
 
@@ -37,6 +39,7 @@ public class FindMin_11003 {
     }
 
     static class Pair {
+
         int index;
         int value;
 

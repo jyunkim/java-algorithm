@@ -5,6 +5,7 @@ import java.util.*;
 
 // 누적합
 public class FireFly_3020 {
+
     private static int n, h;
     private static int[] section;
 

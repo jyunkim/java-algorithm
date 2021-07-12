@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class Teach_1062 {
+
     private static int n, k;
     private static List<String> words; // 다형성 이용 -> 매개변수 같은 타입 정의 시 더 유연
     private static int answer = 0;

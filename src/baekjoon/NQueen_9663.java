@@ -3,6 +3,7 @@ package baekjoon;
 import java.io.*;
 
 public class NQueen_9663 {
+
     private static int n;
     private static int[][] board;
     private static int answer = 0;

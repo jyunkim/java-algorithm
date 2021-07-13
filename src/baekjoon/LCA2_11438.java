@@ -98,7 +98,7 @@ public class LCA2_11438 {
         for (int i = maxI - 1; i >= 0; i--) {
             if (Math.pow(2, i) <= depth[node1] - depth[node2]) {
                 node1 = parents[node1][i];
-            }3
+            }
         }
         // 만약 같아졌으면 반환
         if (node1 == node2) return node1;

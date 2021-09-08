@@ -59,7 +59,7 @@ public class CheckDistance {
     }
 
     // 대기실 내 좌표
-    class Position {
+    static class Position {
         int x;
         int y;
 

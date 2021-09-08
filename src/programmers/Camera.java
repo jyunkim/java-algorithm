@@ -4,12 +4,7 @@ import java.util.*;
 
 public class Camera {
 
-    public static void main(String[] args) {
-        int[][] routes = {{-20,15}, {-14,-5}, {-18,-13}, {-5,-3}};
-        System.out.println(solution(routes));
-    }
-
-    public static int solution(int[][] routes) {
+    public int solution(int[][] routes) {
         int answer = 0;
         Arrays.sort(routes, (a, b) -> a[1] - b[1]); // 빨리 나가는 순으로 정렬
         // LinkedList로 삭제할 때 탐색하는 데 O(n)이 소요되기 때문에 약간 더 느림

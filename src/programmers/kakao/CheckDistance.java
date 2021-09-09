@@ -5,8 +5,8 @@ import java.util.*;
 public class CheckDistance {
 
     // 상하좌우 이동
-    int[] dx = {0, 0, -1, 1};
-    int[] dy = {1, -1, 0, 0};
+    int[] dx = {-1, 1, 0, 0};
+    int[] dy = {0, 0, -1, 1};
 
     public int[] solution(String[][] places) {
         int[] answer = new int[5];
@@ -48,8 +48,9 @@ public class CheckDistance {
                 if (nx < 0 || nx > 4 || ny < 0 || ny > 4) continue;
                 if (visited[nx][ny] || distance > 2) continue;
 
-                if (place[nx].charAt(ny) == 'P') return false;
-                else if ((place[nx].charAt(ny) == 'O')) {
+                if (place[nx].charAt(ny) == 'P') {
+                    return false;
+                } else if ((place[nx].charAt(ny) == 'O')) {
                     queue.offer(new Position(nx, ny));
                     visited[nx][ny] = true;
                 }

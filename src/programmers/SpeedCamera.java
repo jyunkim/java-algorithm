@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.*;
 
-public class Camera {
+public class SpeedCamera {
 
     public int solution(int[][] routes) {
         int answer = 0;

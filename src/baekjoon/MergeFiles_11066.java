@@ -31,8 +31,9 @@ public class MergeFiles_11066 {
             // 점화식
             // dp[i][i] = files[i]
             // dp[i][i + 1] = files[i] + files[i + 1]
-            // dp[i][i + 2] = min(dp[i][i] + dp[i + 1][i + 2] + , dp[i][i + 1] + dp[i + 2][i + 2])
-            // dp[i][j] = min(dp[i][i] + dp[i + 1][j], .. dp[i][k] + dp[k + 1][j], .. dp[i][j - 1] + dp[j][j])
+            // dp[i][i + 2] = min(dp[i][i] + dp[i + 1][i + 2] + files[i + 1] + files[i + 2],
+            //                    dp[i][i + 1] + dp[i + 2][i + 2] + files[i] + files[i + 1])
+            // dp[i][j] = min(.., dp[i][k] + dp[k + 1][j] + files[i] + .. + files[j], ..)
 
             // 초기화
             for (int i = 1; i <= n; i++) {
@@ -48,6 +49,7 @@ public class MergeFiles_11066 {
             }
 
             // 합칠 파일 수를 3부터 n까지 늘려감
+            // i: 시작 지점, j: 끝 지점, k: 나눌 지점
             for (int size = 3; size <= n; size++) {
                 for (int i = 1; i + size - 1 <= n; i++) {
                     int j = i + size - 1;

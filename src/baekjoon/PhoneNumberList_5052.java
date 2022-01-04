@@ -3,6 +3,7 @@ package baekjoon;
 import java.io.*;
 import java.util.*;
 
+// TODO: 2021-09-24 trie로도 시도
 public class PhoneNumberList_5052 {
 
     public static void main(String[] args) throws IOException {

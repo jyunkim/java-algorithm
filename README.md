@@ -47,6 +47,21 @@ Integer 타입 배열의 경우 0이 아닌 null로 초기화됨
 ## 완전 탐색
 DFS 이용
 
+### 이차원 배열 탐색
+재귀를 이용하여 이차원 배열을 한칸씩 탐색하는 경우 -> 몫과 나머지를 이용
+```java
+// n: 행 길이, m: 열 길이
+ void dfs(int index) {
+     if (index == n * m) {
+         return;
+     }
+     int r = index / m;
+     int c = index % m;
+     // graph[r][c] = ~ 
+     dfs(index + 1);
+ }
+```
+
 ### 완전 탐색으로 시간 초과가 발생하는 경우
 1. 이분 탐색   
    답을 mid로 두고 범위를 좁혀가며 탐색

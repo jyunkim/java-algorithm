@@ -44,6 +44,9 @@ Integer 타입 배열의 경우 0이 아닌 null로 초기화됨
 - IndexError 주의
 - index - 1을 하는 경우를 위해 인덱스는 1 ~ n으로 설정   
 
+### 조합
+nCr = n-1Cr + n-1Cr-1
+
 ## 완전 탐색
 DFS 이용
 

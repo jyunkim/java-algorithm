@@ -5,7 +5,6 @@ import java.util.*;
 
 public class CountCross_1615 {
 
-    private static int[][] edges;
     private static long[] tree;
     private static int num;
 
@@ -15,21 +14,18 @@ public class CountCross_1615 {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
 
-        edges = new int[m][2];
+        int[][] edges = new int[m][2];
         for (int i = 0; i < m; i++) {
             st = new StringTokenizer(br.readLine());
             edges[i][0] = Integer.parseInt(st.nextToken());
             edges[i][1] = Integer.parseInt(st.nextToken());
         }
 
-        Arrays.sort(edges, new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                if (o1[0] == o2[0]) {
-                    return o1[1] - o2[1];
-                } else {
-                    return o1[0] - o2[0];
-                }
+        Arrays.sort(edges, (o1, o2) -> {
+            if (o1[0] == o2[0]) {
+                return o1[1] - o2[1];
+            } else {
+                return o1[0] - o2[0];
             }
         });
 

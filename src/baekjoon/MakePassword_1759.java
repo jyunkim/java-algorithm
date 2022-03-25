@@ -23,10 +23,10 @@ public class MakePassword_1759 {
         }
         Arrays.sort(alphabets);
 
-        dfs(0, -1, "");
+        dfs(0, 0, "");
     }
 
-    public static void dfs(int count, int index, String password) {
+    public static void dfs(int index, int count, String password) {
         if (count == l) {
             if (checkPassword(password)) {
                 System.out.println(password);
@@ -34,8 +34,8 @@ public class MakePassword_1759 {
             return;
         }
 
-        for (int i = index + 1; i < alphabets.length; i++) {
-            dfs(count + 1, i, password + alphabets[i]);
+        for (int i = index; i < alphabets.length; i++) {
+            dfs(i + 1, count + 1, password + alphabets[i]);
         }
     }
 
@@ -45,7 +45,6 @@ public class MakePassword_1759 {
      */
     public static boolean checkPassword(String password) {
         String temp = password.replaceAll("[aeiou]", "");
-
         return temp.length() != password.length() && temp.length() >= 2;
     }
 }

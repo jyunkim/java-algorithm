@@ -7,7 +7,6 @@ import java.util.*;
 // Kruskal Algorithm
 public class ConnectNetwork_1922 {
 
-    private static Edge[] edges;
     private static int[] parent;
     private static int answer;
 
@@ -23,7 +22,7 @@ public class ConnectNetwork_1922 {
             parent[i] = i;
         }
 
-        edges = new Edge[m];
+        Edge[] edges = new Edge[m];
         for (int i = 0; i < m; i++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
@@ -61,8 +60,9 @@ public class ConnectNetwork_1922 {
     }
 
     static class Edge implements Comparable<Edge> {
-
-        private int node1, node2, cost;
+        int node1;
+        int node2;
+        int cost;
 
         public Edge(int node1, int node2, int cost) {
             this.node1 = node1;

@@ -6,7 +6,7 @@ import java.io.*;
 public class FindTreeParent_11725 {
 
     static int n;
-    static int[] parent; // index(자식) -> element(부모)
+    static int[] parents; // index(자식) -> element(부모)
     static boolean[] visited; // 방문 처리 배열
     static List<Integer>[] adjacents; // 인접 리스트
 
@@ -15,9 +15,9 @@ public class FindTreeParent_11725 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         n = Integer.parseInt(st.nextToken());
 
-        parent = new int[n + 1];
+        parents = new int[n + 1];
         visited = new boolean[n + 1];
-        adjacents = new ArrayList[n + 1];
+        adjacents = new List[n + 1];
         for (int i = 1; i < n + 1; i++) {
             adjacents[i] = new ArrayList<>();
         }
@@ -36,7 +36,7 @@ public class FindTreeParent_11725 {
         StringBuilder sb = new StringBuilder();
         for (int i = 2; i < n + 1; i++) {
 //            System.out.println(parent[i]);
-            sb.append(parent[i]).append("\n");
+            sb.append(parents[i]).append("\n");
         }
         System.out.println(sb);
     }
@@ -53,10 +53,19 @@ public class FindTreeParent_11725 {
             for (Integer node : adjacents[cur]) {
                 if (!visited[node]) {
                     visited[node] = true;
-                    parent[node] = cur;
+                    parents[node] = cur;
                     queue.offer(node);
                 }
             }
         }
     }
+
+//    private static void dfs(int current, int parent) {
+//        for (int next : adjacents[current]) {
+//            if (next != parent) {
+//                parents[next] = current;
+//                dfs(next, current);
+//            }
+//        }
+//    }
 }

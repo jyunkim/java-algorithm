@@ -3,6 +3,7 @@ package baekjoon;
 import java.util.*;
 import java.io.*;
 
+// 비트마스킹
 public class WordMemorization_18119 {
 
 //    static List<String> dictionary = new ArrayList<>(); // 단어가 적힌 사전

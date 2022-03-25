@@ -13,7 +13,7 @@ public class MakeBig_2812 {
         String number = br.readLine();
 
         List<Character> stack = new ArrayList<>();
-        for (int i = 0; i < number.length(); i++) {
+        for (int i = 0; i < n; i++) {
             char digit = number.charAt(i);
             // 맨 앞 숫자를 최대한 크게 만들어줌
             while (!stack.isEmpty() && k > 0 && stack.get(stack.size() - 1) < digit) {

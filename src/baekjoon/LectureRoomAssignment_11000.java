@@ -13,7 +13,7 @@ public class LectureRoomAssignment_11000 {
         int n = Integer.parseInt(br.readLine());
 
         List<Lecture> lectures = new ArrayList<>();
-        Queue<Integer> pq = new PriorityQueue<>();
+        Queue<Integer> inLecture = new PriorityQueue<>();
 
         for (int i = 0; i < n; i++) {
             st = new StringTokenizer(br.readLine());
@@ -24,18 +24,18 @@ public class LectureRoomAssignment_11000 {
         }
         Collections.sort(lectures);
 
-        pq.offer(lectures.get(0).t);
+        inLecture.offer(lectures.get(0).t);
 
         // 시작 시간이 빠르고 먼저 끝나는 강의부터 처리
         for (int i = 1; i < lectures.size(); i++) {
-            Integer t = pq.peek();
+            Integer t = inLecture.peek();
 
             if (t <= lectures.get(i).s) { // 다음 수업 시작
-                pq.poll();
+                inLecture.poll();
             } else { // 강의실 추가 배정
                 answer++;
             }
-            pq.offer(lectures.get(i).t);
+            inLecture.offer(lectures.get(i).t);
         }
 
         System.out.println(answer);

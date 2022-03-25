@@ -2,16 +2,18 @@ public class RadixConversion {
 
     public static void main(String[] args) {
         System.out.println(convert(8, 2));
+        System.out.println(convert(9, 2));
+        System.out.println(Integer.toBinaryString(8));
     }
 
     // n을 k진수로 변환
-    public static String convert(int n, int k) {
-        String num = "";
+    private static String convert(int n, int k) {
+        StringBuilder convertedNum = new StringBuilder();
 
         while (n > 0) {
-            num = (n % k) + num; // int + String = String
-            n /= k; // int / int = int
+            convertedNum.insert(0, (n % k)); // int + String = String
+            n /= k;
         }
-        return num;
+        return convertedNum.toString();
     }
 }

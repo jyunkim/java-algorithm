@@ -13,7 +13,7 @@ public class CountMap {
         System.out.println(sortedMap);
     }
 
-    public static Map<String, Integer> countV1(String[] arr) {
+    private static Map<String, Integer> countV1(String[] arr) {
         Map<String, Integer> map = new HashMap<>();
 
         for (String s : arr) {
@@ -26,7 +26,7 @@ public class CountMap {
         return map;
     }
 
-    public static Map<String, Integer> countV2(String[] arr) {
+    private static Map<String, Integer> countV2(String[] arr) {
         Map<String, Integer> map = new HashMap<>();
 
         for (String s : arr) {
@@ -36,12 +36,12 @@ public class CountMap {
         return map;
     }
 
-    public static Map<String, Integer> countV3(String[] arr) {
+    private static Map<String, Integer> countV3(String[] arr) {
         Map<String, Integer> map = new HashMap<>();
 
         for (String s : arr) {
             map.computeIfPresent(s, (key, value) -> value + 1);
-            map.computeIfAbsent(s, key -> 1);
+            map.putIfAbsent(s, 1);
         }
         return map;
     }

@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 import java.util.stream.IntStream;
 
+// 완전탐색
 public class WorldCup_6987 {
 
     // 1이면 가능, 0이면 불가능

@@ -3,7 +3,7 @@ package baekjoon;
 import java.util.*;
 import java.io.*;
 
-// 비트 연산 이용
+// 비트마스킹
 public class CastleV2_2234 {
 
     static int n, m;

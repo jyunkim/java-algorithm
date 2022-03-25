@@ -5,7 +5,7 @@ import java.util.*;
 
 public class FriendNetwork_4195 {
 
-    private static Map<String, String> parent;
+    private static Map<String, String> parent; // 몇 개가 주어질지 몰라 배열 대신 map 사용
     private static Map<String, Integer> count;
 
     public static void main(String[] args) throws IOException {

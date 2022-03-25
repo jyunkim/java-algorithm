@@ -3,6 +3,7 @@ package baekjoon;
 import java.util.*;
 import java.io.*;
 
+// 다익스트라
 // 특정 노드에서 다른 노드로의 최단 경로 중 특정 간선을 지나는 목적지
 // -> 목적지로의 최단 거리 == 목적지까지 특정 간선을 거쳐 가는 최단 거리
 public class UnidentifiedDestination_9370 {

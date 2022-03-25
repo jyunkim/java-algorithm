@@ -11,7 +11,7 @@ public class LaserCommunication_6087 {
     static int[][][] count; // 해당 지점까지 설치해야 하는 거울 개수. 들어온 방향까지 고려
     static int[] dx = {-1, 1, 0, 0};
     static int[] dy = {0, 0, -1, 1};
-    static List<Space> endpoint = new ArrayList<>();; // 출발점과 끝점
+    static List<Space> endpoint = new ArrayList<>(); // 출발점과 끝점
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -58,7 +58,7 @@ public class LaserCommunication_6087 {
                 int nx = x + dx[i];
                 int ny = y + dy[i];
 
-                // 범위를 벗어나 거나 벽일 경우 방문 x
+                // 범위를 벗어나거나 벽일 경우 방문 x
                 if (nx < 0 || nx >= h || ny < 0 || ny >= w || map[nx][ny] == '*') continue;
 
                 int temp;

@@ -6,15 +6,12 @@ import java.util.*;
 // 누적합
 public class FireFly_3020 {
 
-    private static int n, h;
-    private static int[] section;
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        n = Integer.parseInt(st.nextToken());
-        h = Integer.parseInt(st.nextToken());
-        section = new int[500000];
+        int n = Integer.parseInt(st.nextToken());
+        int h = Integer.parseInt(st.nextToken());
+        int[] section = new int[h];
 
         // 배열에 길이 끝 부분 표시
         // 길이 시작점 index +1, 길이 끝점 다음 index -1
